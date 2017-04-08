@@ -1,0 +1,56 @@
+.order
+  position relative
+  z-index 10
+  padding-top 40px
+  background $cloudy url("../img/image-order.png") 50% 0 no-repeat
+  background-size auto 100%
+
+  &::before
+    position absolute
+    bottom 430px
+    left 50%
+    z-index -5
+    display block
+    width 1920px
+    height 896px
+    background transparent url("../img/image-reviews.png") 0 0 no-repeat
+    background-size 1920px 896px
+    content ""
+
+    transform translateX(-50%)
+
+  &__hgroup
+    position absolute
+    left -400px
+    z-index 5
+
+  &__inner
+    position relative
+
+    &::before
+      position absolute
+      top -35px
+      left -40px
+      z-index -5
+      display block
+      width 168px
+      height 168px
+      background transparent url("../img/bg-disc.svg") 0 0 no-repeat
+      background-size 168px 168px
+      content ""
+
+  &__title
+    margin-bottom 10px
+
+  &__text
+    margin-bottom 15px
+
+  &__fn
+    padding 30px 0
+    font(1.125em, 1.2, 700, uppercase)
+
+  &__wrapper
+    position relative
+    margin-left auto
+    max-width 650px
+    text-align center

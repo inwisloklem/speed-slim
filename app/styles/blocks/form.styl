@@ -1,0 +1,49 @@
+.form
+  &__input
+  &__input-1
+  &__input-2
+    box-sizing border-box
+    margin-bottom 15px
+    width 100%
+    outline none
+    border none
+    border-radius 10px
+    background-color $white
+    color $mine-shaft
+    text-decoration none
+
+    &--type-1
+    &--type-1b
+      padding 0 15px
+      height 60px
+
+    &--type-1
+      font(0.875em, 1, 700, uppercase)
+
+    &--type-1b
+      font(1.875em, 1, 700, uppercase)
+
+    &--type-2
+    &--type-2b
+      padding 0 35px
+      height 80px
+
+    &--type-2
+      font(1em, 1, 700, uppercase)
+
+    &--type-2b
+      font(3em, 1, 700, uppercase)
+
+    &:focus
+      font-weight 700
+
+  &__row
+    display flex
+    flex-direction row
+    justify-content space-between
+
+  &__input-1
+    width 60%
+
+  &__input-2
+    width 35%

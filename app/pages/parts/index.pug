@@ -1,0 +1,125 @@
+doctype html
+
+html(lang = "ru")
+  include parts/head.pug
+
+  body
+    include parts/svg-sprite.pug
+
+    header
+      section.speed
+        .container
+          .speed__image
+            img(src = "img/image-speed.png", width = 300, height = 159, alt = "Speed Slim")
+
+          .speed__wrapper
+            .speed__block.speed__block--1
+              .speed__hgroup
+                svg.speed__element(width = 60, height = 124)
+                  use(xlink:href = "#element-title")
+                h2.title.speed__title-1 Абсолютное решение для похудения
+              .text.speed__text Забудь про изнурительные диеты #[br] и тренировки в спорт зале
+
+            .speed__block.speed__block--2
+              .speed__inner
+                h3.title.title--adv-1.speed__title-2 Акция
+
+              .text.text--form-1.speed__text-1 Запишись на бесплатный сеанс миостимуляции
+              .text.text--form-2.speed__text-2 Получи консультацию диетолога и диагностику состава тела в подарок
+
+              form.form.speed__form(action = "#", method = "post")
+                .form__row
+                  input.form__input-1.form__input--type-1(type = "text", name = "name", placeholder = "Ваше имя")
+                  input.form__input-2.form__input--type-1(type = "text", name = "age", placeholder = "Ваш возраст")
+                .form__row
+                  input.form__input.form__input--type-1b(type = "tel", name = "phone", placeholder = "+7 (- - -) - - -  - -  - -")
+              .form__row
+                button.btn.btn--type-1.form__btn(type = "submit") Записаться
+
+    main
+      section.features
+        .container
+          .features__hgroup
+            svg.features__element(width = 60, height = 124)
+              use(xlink:href = "#element-title")
+            h2.title.features__title Преимущества процедуры
+            .text.features__text Процедура длится всего 30 минут и за это время Вы получаете:
+
+          ul.features__list
+            li.features__item
+              svg.features__icon(width = 65, height = 65)
+                use(xlink:href = "#icon-features")
+              .text.features__text
+                | Сжигание калорий и ускорение обмена веществ и укрепление дряблых участков тела
+            li.features__item
+              svg.features__icon(width = 65, height = 65)
+                use(xlink:href = "#icon-features")
+              .text.features__text
+                | Разбиение целлюлита
+            li.features__item
+              svg.features__icon(width = 65, height = 65)
+                use(xlink:href = "#icon-features")
+              .text.features__text
+                | Тренировка мышц, которые обычно не активны и профилактика обвисания мышц
+            li.features__item
+              svg.features__icon(width = 65, height = 65)
+                use(xlink:href = "#icon-features")
+              .text.features__text
+                | Лимфодренаж
+            li.features__item
+              svg.features__icon(width = 65, height = 65)
+                use(xlink:href = "#icon-features")
+              .text.features__text
+                | Снятие усталости и мышечной боли
+            li.features__item
+              svg.features__icon(width = 65, height = 65)
+                use(xlink:href = "#icon-features")
+              .text.features__text
+                | Эффект заметен сразу после первого сеанса
+
+      section.reviews
+        .container
+          .reviews__hgroup
+            svg.reviews__element(width = 60, height = 124)
+              use(xlink:href = "#element-title")
+            h2.title.reviews__title Отзывы наших клиентов
+
+          .reviews__wrapper
+            .reviews__block.reviews__block--1
+              .reviews__image
+                img(src = "img/image-reviews-2.png", width = 467, height = 467, alt = "Speed Slim")
+            .reviews__block.reviews__block--2
+              .reviews__name Маргарита
+              .reviews__city г. Москва
+              .reviews__text
+                | Пошла на миостимуляцию, когда моя обычная диета, скрабы, домашние обертывания и упражнения перестали приносить результаты.
+                | За полгода ушло 10 см объемов, а потом вес стал колом.
+                | Ограничивать себя в еде ещё больше, больше времени тратить на упражнения я не могла себе позволить, потому решила попробовать что-нибудь из аппаратных методик.
+                | Косметолог посоветовал миостимуляцию.
+                | В первую процедуру я думала, что не доживу до конца сеанса.
+                | Было больно, и неприятно. Остальные процедуры прошли полегче.
+                | Зоны тела, на которые проводилось воздействие, я каждый раз меняла.
+                | Спустя 3 недели и 10 процедур этого мучения у меня ушло ещё 4 см в талии, чему я несказанно рада.
+
+    footer
+      section.order
+        .container
+          .order__wrapper
+            .order__hgroup
+              h3.title.title--adv-2.order__title Акция
+            h2.title.title--pear.order__title Запишись на бесплатный сеанс миостимуляции
+
+            .text.text--form-3.order__text Получи консультацию диетолога и диагностику состава тела в подарок
+
+            .text.text--form-4.order__text Торопитесь количество мест ограничено!
+
+            form.form.order__form(action = "#", method = "post")
+              .form__row
+                input.form__input-1.form__input--type-2(type = "text", name = "name", placeholder = "Ваше имя")
+                input.form__input-2.form__input--type-2(type = "text", name = "age", placeholder = "Ваш возраст")
+              .form__row
+                input.form__input.form__input--type-2b(type = "tel", name = "phone", placeholder = "+7 (- - -) - - -  - -  - -")
+              .form__row
+                button.btn.btn--type-2.form__btn(type = "submit") Записаться
+
+            .order__fn Стоимость процедуры без скидки 4000 руб

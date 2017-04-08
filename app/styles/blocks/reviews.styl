@@ -1,0 +1,48 @@
+.reviews
+  position relative
+  margin-top -300px
+  color $mine-shaft
+
+  &__title
+    margin-bottom 60px
+    padding-left 530px
+    max-width 380px
+
+  &__hgroup
+    position relative
+
+  &__element
+    position absolute
+    top 50%
+    left 460px
+
+    transform translateY(-50%)
+
+  &__name
+    font(1.5em, 1.2, 700, uppercase)
+
+  &__city
+    margin-bottom 20px
+    font(1.5em, 1.2, 700)
+
+  &__text
+    font(1.25em, 1.2, 400)
+
+  &__wrapper
+    display flex
+    flex-direction row
+    justify-content space-between
+
+  &__block
+    &--2
+      box-sizing border-box
+      padding 0 65px
+      padding-bottom 90px
+      min-width 730px
+      width 730px
+
+  &__image
+    position relative
+    top -200px
+    left -25%
+    z-index 15

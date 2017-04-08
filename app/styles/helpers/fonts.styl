@@ -1,0 +1,23 @@
+@font-face
+  font-weight 400
+  font-style normal
+  font-family "Roboto Condensed"
+  src: local("Roboto Condensed"), local("robotoCondensed-Regular"), url("../fonts/robotocondensed.woff2") format("woff2"), url("../fonts/robotocondensed.woff") format("woff")
+
+@font-face
+  font-weight 700
+  font-style normal
+  font-family "Roboto Condensed"
+  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("../fonts/robotocondensedbold.woff2") format("woff2"), url("../fonts/robotocondensedbold.woff") format("woff")
+
+$font = "Roboto Condensed", sans-serif
+
+font($size, $height = normal, $weight = 400, $transform = none)
+  font-weight $weight
+  font-size $size
+
+  if $height != "normal"
+    line-height $height
+
+  if $transform != "none"
+    text-transform $transform
