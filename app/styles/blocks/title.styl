@@ -1,5 +1,9 @@
 .title
-  font(3.25em, 1.2, 700, uppercase)
+  font(2em, 1.2, 700, uppercase)
+
+  @media $desktop
+    font(3.25em, 1.2, 700, uppercase)
+
 
   &--adv-1
     color $black
@@ -10,4 +14,7 @@
     font(5.1875em, 1.2, 700, uppercase)
 
   &--pear
-    color $pear
+    color $curious-blue
+
+    @media $desktop
+      color $pear

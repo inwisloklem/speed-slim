@@ -1,12 +1,18 @@
 .features
-  min-height 1100px
-  background transparent url("../img/bg-features.png") 50% 100% no-repeat
-  background-size 1920px 998px
+  padding-bottom 50px
+
+  @media $desktop
+    min-height 1100px
+    background transparent url("../img/bg-features.png") 50% 100% no-repeat
+    background-size 1920px 998px
 
   &__hgroup
     position relative
-    margin-bottom 50px
+    margin-bottom 10px
     padding-left 65px
+
+    @media $desktop
+      margin-bottom 50px
 
   &__item
     position relative

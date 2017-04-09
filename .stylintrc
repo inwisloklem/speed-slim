@@ -4,7 +4,7 @@
   "colors": "always",
   "commaSpace": "always",
   "commentSpace": "always",
-  "depthLimit": 4,
+  "depthLimit": 8,
   "duplicates": false,
   "globalDupe": false,
   "efficient": "always",

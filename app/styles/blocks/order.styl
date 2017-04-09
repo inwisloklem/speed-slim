@@ -1,28 +1,36 @@
 .order
-  position relative
-  z-index 10
   padding-top 40px
-  background $cloudy url("../img/image-order.png") 50% 0 no-repeat
-  background-size auto 100%
+  background-color $pear
 
-  &::before
-    position absolute
-    bottom 430px
-    left 50%
-    z-index -5
-    display block
-    width 1920px
-    height 896px
-    background transparent url("../img/image-reviews.png") 0 0 no-repeat
-    background-size 1920px 896px
-    content ""
+  @media $desktop
+    position relative
+    z-index 10
+    background $cloudy url("../img/image-order.png") 50% 0 no-repeat
+    background-size auto 100%
 
-    transform translateX(-50%)
+  @media $desktop
+    &::before
+      position absolute
+      bottom 430px
+      left 50%
+      z-index -5
+      display block
+      width 1920px
+      height 896px
+      background transparent url("../img/image-reviews.png") 0 0 no-repeat
+      background-size 1920px 896px
+      content ""
+
+      transform translateX(-50%)
 
   &__hgroup
-    position absolute
-    left -400px
-    z-index 5
+    display none
+
+    @media $desktop
+      position absolute
+      left -400px
+      z-index 5
+      display block
 
   &__inner
     position relative
@@ -51,6 +59,8 @@
 
   &__wrapper
     position relative
-    margin-left auto
-    max-width 650px
     text-align center
+
+    @media $desktop
+      margin-left auto
+      max-width 650px

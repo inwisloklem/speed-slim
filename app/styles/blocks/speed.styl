@@ -1,13 +1,21 @@
 .speed
   overflow hidden
   padding 20px 0
+
   background transparent url("../img/bg-speed.png") 50% 0 no-repeat
   background-size 1920px 680px
 
   &__image
     display flex
     justify-content center
-    height 159px
+
+    img
+      width 200px
+      height 106px
+
+      @media $desktop
+        width auto
+        height auto
 
   &__hgroup
     position relative
@@ -23,7 +31,10 @@
 
   &__title-1
     margin-bottom 10px
-    width 570px
+    max-width 570px
+
+    @media $desktop
+      width 570px
 
   &__title-2
     position relative
@@ -32,7 +43,11 @@
 
   &__wrapper
     display flex
-    flex-direction row
+    flex-direction column
+    align-items center
+
+    @media $desktop
+      flex-direction row
 
   &__inner
     position relative
@@ -57,21 +72,15 @@
 
   &__block
     &--1
-      position relative
-      padding-top 60px
+      margin-right auto
+      margin-bottom 240px
+      padding-top 30px
 
-      &::after
-        position absolute
-        bottom 30px
-        left -30px
-        display block
-        width 792px
-        height 365px
-        background transparent url("../img/image-speed-woman.png") 0 0 no-repeat
-        background-size 792px 365px
-        content ""
+      @media $desktop
+        padding-top 60px
 
     &--2
+      position relative
       box-sizing border-box
       padding 40px 120px
       min-width 590px
@@ -79,3 +88,24 @@
       height 590px
       background transparent url("../img/bg-form.svg") 0 0 no-repeat
       background-size 590px 590px
+
+      &::after
+        position absolute
+        top -270px
+        left 50%
+        display block
+        width 528px
+        height 244px
+        background transparent url("../img/image-speed-woman.png") 0 0 no-repeat
+        background-size 528px 244px
+        content ""
+        transform translateX(-50%)
+
+        @media $desktop
+          top auto
+          bottom 0
+          left -680px
+          width 792px
+          height 365px
+          background-size 792px 365px
+          transform none

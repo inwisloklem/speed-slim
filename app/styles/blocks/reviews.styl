@@ -1,12 +1,17 @@
 .reviews
   position relative
-  margin-top -300px
   color $mine-shaft
+
+  @media $desktop
+    margin-top -300px
 
   &__title
     margin-bottom 60px
-    padding-left 530px
+    padding-left 65px
     max-width 380px
+
+    @media $desktop
+      padding-left 530px
 
   &__hgroup
     position relative
@@ -14,9 +19,11 @@
   &__element
     position absolute
     top 50%
-    left 460px
-
+    left 0
     transform translateY(-50%)
+
+    @media $desktop
+      left 460px
 
   &__name
     font(1.5em, 1.2, 700, uppercase)
@@ -29,20 +36,30 @@
     font(1.25em, 1.2, 400)
 
   &__wrapper
-    display flex
-    flex-direction row
-    justify-content space-between
+    @media $desktop
+      display flex
+      flex-direction row
+      justify-content space-between
 
   &__block
     &--2
       box-sizing border-box
-      padding 0 65px
-      padding-bottom 90px
-      min-width 730px
-      width 730px
+      padding-right 10px
+      padding-bottom 60px
+      padding-left 20px
+      width 100%
+
+      @media $desktop
+        padding 0 65px
+        padding-bottom 90px
+        min-width 730px
 
   &__image
     position relative
     top -200px
     left -25%
     z-index 15
+    display none
+
+    @media $desktop
+      display block

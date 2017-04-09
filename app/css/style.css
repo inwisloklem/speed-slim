@@ -14,12 +14,7 @@ body {
   overflow-x: hidden;
   width: 100%;
   height: 100%;
-  font-size: 80%;
-}
-@media (min-width: 700px) {
-  body {
-    font-size: 100%;
-  }
+  font-size: 100%;
 }
 body,
 input,
@@ -75,7 +70,7 @@ ul {
 .container {
   padding: 0 10px;
 }
-@media (min-width: 1170px) {
+@media (min-width: 1110px) {
   .container {
     margin: auto;
     padding: 0 30px;
@@ -83,14 +78,24 @@ ul {
   }
 }
 .features {
-  min-height: 1100px;
-  background: transparent url("../img/bg-features.png") 50% 100% no-repeat;
-  background-size: 1920px 998px;
+  padding-bottom: 50px;
+}
+@media (min-width: 1110px) {
+  .features {
+    min-height: 1100px;
+    background: transparent url("../img/bg-features.png") 50% 100% no-repeat;
+    background-size: 1920px 998px;
+  }
 }
 .features__hgroup {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   padding-left: 65px;
+}
+@media (min-width: 1110px) {
+  .features__hgroup {
+    margin-bottom: 50px;
+  }
 }
 .features__item {
   position: relative;
@@ -152,7 +157,7 @@ ul {
 .form__input--type-2b,
 .form__input-1--type-2b,
 .form__input-2--type-2b {
-  padding: 0 35px;
+  padding: 0 25px;
   height: 80px;
 }
 .form__input--type-2,
@@ -182,35 +187,49 @@ ul {
   justify-content: space-between;
 }
 .form__input-1 {
+  margin-right: 15px;
   width: 60%;
 }
 .form__input-2 {
-  width: 35%;
+  width: 40%;
 }
 .order {
-  position: relative;
-  z-index: 10;
   padding-top: 40px;
-  background: #aaa39d url("../img/image-order.png") 50% 0 no-repeat;
-  background-size: auto 100%;
+  background-color: #cddc39;
 }
-.order::before {
-  position: absolute;
-  bottom: 430px;
-  left: 50%;
-  z-index: -5;
-  display: block;
-  width: 1920px;
-  height: 896px;
-  background: transparent url("../img/image-reviews.png") 0 0 no-repeat;
-  background-size: 1920px 896px;
-  content: "";
-  transform: translateX(-50%);
+@media (min-width: 1110px) {
+  .order {
+    position: relative;
+    z-index: 10;
+    background: #aaa39d url("../img/image-order.png") 50% 0 no-repeat;
+    background-size: auto 100%;
+  }
+}
+@media (min-width: 1110px) {
+  .order::before {
+    position: absolute;
+    bottom: 430px;
+    left: 50%;
+    z-index: -5;
+    display: block;
+    width: 1920px;
+    height: 896px;
+    background: transparent url("../img/image-reviews.png") 0 0 no-repeat;
+    background-size: 1920px 896px;
+    content: "";
+    transform: translateX(-50%);
+  }
 }
 .order__hgroup {
-  position: absolute;
-  left: -400px;
-  z-index: 5;
+  display: none;
+}
+@media (min-width: 1110px) {
+  .order__hgroup {
+    position: absolute;
+    left: -400px;
+    z-index: 5;
+    display: block;
+  }
 }
 .order__inner {
   position: relative;
@@ -242,19 +261,32 @@ ul {
 }
 .order__wrapper {
   position: relative;
-  margin-left: auto;
-  max-width: 650px;
   text-align: center;
+}
+@media (min-width: 1110px) {
+  .order__wrapper {
+    margin-left: auto;
+    max-width: 650px;
+  }
 }
 .reviews {
   position: relative;
-  margin-top: -300px;
   color: #222;
+}
+@media (min-width: 1110px) {
+  .reviews {
+    margin-top: -300px;
+  }
 }
 .reviews__title {
   margin-bottom: 60px;
-  padding-left: 530px;
+  padding-left: 65px;
   max-width: 380px;
+}
+@media (min-width: 1110px) {
+  .reviews__title {
+    padding-left: 530px;
+  }
 }
 .reviews__hgroup {
   position: relative;
@@ -262,8 +294,13 @@ ul {
 .reviews__element {
   position: absolute;
   top: 50%;
-  left: 460px;
+  left: 0;
   transform: translateY(-50%);
+}
+@media (min-width: 1110px) {
+  .reviews__element {
+    left: 460px;
+  }
 }
 .reviews__name {
   font-weight: 700;
@@ -282,23 +319,38 @@ ul {
   font-size: 1.25em;
   line-height: 1.2;
 }
-.reviews__wrapper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+@media (min-width: 1110px) {
+  .reviews__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .reviews__block--2 {
   box-sizing: border-box;
-  padding: 0 65px;
-  padding-bottom: 90px;
-  min-width: 730px;
-  width: 730px;
+  padding-right: 10px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  width: 100%;
+}
+@media (min-width: 1110px) {
+  .reviews__block--2 {
+    padding: 0 65px;
+    padding-bottom: 90px;
+    min-width: 730px;
+  }
 }
 .reviews__image {
   position: relative;
   top: -200px;
   left: -25%;
   z-index: 15;
+  display: none;
+}
+@media (min-width: 1110px) {
+  .reviews__image {
+    display: block;
+  }
 }
 .speed {
   overflow: hidden;
@@ -309,7 +361,16 @@ ul {
 .speed__image {
   display: flex;
   justify-content: center;
-  height: 159px;
+}
+.speed__image img {
+  width: 200px;
+  height: 106px;
+}
+@media (min-width: 1110px) {
+  .speed__image img {
+    width: auto;
+    height: auto;
+  }
 }
 .speed__hgroup {
   position: relative;
@@ -325,7 +386,12 @@ ul {
 }
 .speed__title-1 {
   margin-bottom: 10px;
-  width: 570px;
+  max-width: 570px;
+}
+@media (min-width: 1110px) {
+  .speed__title-1 {
+    width: 570px;
+  }
 }
 .speed__title-2 {
   position: relative;
@@ -334,7 +400,13 @@ ul {
 }
 .speed__wrapper {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1110px) {
+  .speed__wrapper {
+    flex-direction: row;
+  }
 }
 .speed__inner {
   position: relative;
@@ -358,21 +430,17 @@ ul {
   margin-bottom: 10px;
 }
 .speed__block--1 {
-  position: relative;
-  padding-top: 60px;
+  margin-right: auto;
+  margin-bottom: 240px;
+  padding-top: 30px;
 }
-.speed__block--1::after {
-  position: absolute;
-  bottom: 30px;
-  left: -30px;
-  display: block;
-  width: 792px;
-  height: 365px;
-  background: transparent url("../img/image-speed-woman.png") 0 0 no-repeat;
-  background-size: 792px 365px;
-  content: "";
+@media (min-width: 1110px) {
+  .speed__block--1 {
+    padding-top: 60px;
+  }
 }
 .speed__block--2 {
+  position: relative;
   box-sizing: border-box;
   padding: 40px 120px;
   min-width: 590px;
@@ -380,6 +448,29 @@ ul {
   height: 590px;
   background: transparent url("../img/bg-form.svg") 0 0 no-repeat;
   background-size: 590px 590px;
+}
+.speed__block--2::after {
+  position: absolute;
+  top: -270px;
+  left: 50%;
+  display: block;
+  width: 528px;
+  height: 244px;
+  background: transparent url("../img/image-speed-woman.png") 0 0 no-repeat;
+  background-size: 528px 244px;
+  content: "";
+  transform: translateX(-50%);
+}
+@media (min-width: 1110px) {
+  .speed__block--2::after {
+    top: auto;
+    bottom: 0;
+    left: -680px;
+    width: 792px;
+    height: 365px;
+    background-size: 792px 365px;
+    transform: none;
+  }
 }
 .text {
   color: #666;
@@ -423,9 +514,17 @@ ul {
 }
 .title {
   font-weight: 700;
-  font-size: 3.25em;
+  font-size: 2em;
   line-height: 1.2;
   text-transform: uppercase;
+}
+@media (min-width: 1110px) {
+  .title {
+    font-weight: 700;
+    font-size: 3.25em;
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
 }
 .title--adv-1 {
   color: #000;
@@ -442,7 +541,12 @@ ul {
   text-transform: uppercase;
 }
 .title--pear {
-  color: #cddc39;
+  color: #28a7e1;
+}
+@media (min-width: 1110px) {
+  .title--pear {
+    color: #cddc39;
+  }
 }
 .visually-hidden {
   display: none;
