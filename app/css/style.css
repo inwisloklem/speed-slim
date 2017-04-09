@@ -89,7 +89,7 @@ ul {
 }
 .features__hgroup {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding-left: 65px;
 }
 @media (min-width: 1110px) {
@@ -355,8 +355,13 @@ ul {
 .speed {
   overflow: hidden;
   padding: 20px 0;
-  background: transparent url("../img/bg-speed.png") 50% 0 no-repeat;
+  background: transparent url("../img/bg-speed.png") calc(50% + 170px) -160px no-repeat;
   background-size: 1920px 680px;
+}
+@media (min-width: 1110px) {
+  .speed {
+    background-position: 50% 0;
+  }
 }
 .speed__image {
   display: flex;
@@ -431,11 +436,12 @@ ul {
 }
 .speed__block--1 {
   margin-right: auto;
-  margin-bottom: 240px;
   padding-top: 30px;
+  min-height: 380px;
 }
 @media (min-width: 1110px) {
   .speed__block--1 {
+    margin-bottom: 240px;
     padding-top: 60px;
   }
 }

@@ -2,8 +2,11 @@
   overflow hidden
   padding 20px 0
 
-  background transparent url("../img/bg-speed.png") 50% 0 no-repeat
+  background transparent url("../img/bg-speed.png") calc(50% + 170px) -160px no-repeat
   background-size 1920px 680px
+
+  @media $desktop
+    background-position 50% 0
 
   &__image
     display flex
@@ -73,10 +76,12 @@
   &__block
     &--1
       margin-right auto
-      margin-bottom 240px
+
       padding-top 30px
+      min-height 380px
 
       @media $desktop
+        margin-bottom 240px
         padding-top 60px
 
     &--2
